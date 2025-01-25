@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
 import AdminNavbar from "./AdminNavbar";
 
 function InputForm() {
   const [details, setDetails] = useState({
+    name : "",
     description: "",
     price: "",
     quantity:"",
@@ -42,6 +42,7 @@ function InputForm() {
   function submitDetails() {
     const token = localStorage.getItem("token")
     const formData = new FormData();
+    formData.append("name", details.name);
     formData.append("des", details.description);
     formData.append("price", details.price);
     formData.append("category", details.category);
@@ -89,6 +90,14 @@ function InputForm() {
             value={details.description}
             required
             maxLength="500"
+          />
+           <input
+            type="text"
+            name="name"
+            placeholder="Enter name"
+            onChange={handlerMethod}
+            className="form-input"
+            value={details.name}
           />
           <input
             type="number"

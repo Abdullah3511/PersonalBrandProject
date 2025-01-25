@@ -80,7 +80,7 @@ function SingleProduct({ cartData, setCartData }) {
             className="product-image-detail"
           />
           <div className="product-details">
-            <h3>{singleEmployee.name}</h3>
+            <h2>Name :{singleEmployee.name}</h2>
             <p><strong>Description:</strong> {singleEmployee.description}</p>
             <p><strong>Price:</strong> {singleEmployee.price} $</p>
 

@@ -77,8 +77,8 @@ function Display({products, setProducts}) {
                 onError={(e) => (e.target.src = "/fallback-image.png")}
                 className="employee-image"
               />
-              <p>{product.description}</p>
-              <p>{product.id}</p>
+              <h2>{product.name}</h2>
+              {/* <p>{product.id}</p> */}
               <h3>Price: ${product.price}</h3>
               <button onClick={() => navigate(`/singleproduct/${product.id}`)} className="form-button">
                 Show Details

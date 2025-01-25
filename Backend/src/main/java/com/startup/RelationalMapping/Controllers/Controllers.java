@@ -57,6 +57,7 @@ public class Controllers {
 
     @PostMapping("/getdetails")
     public ResponseEntity InsertDetails(@RequestParam("des") String description,
+                                        @RequestParam("name") String name,
                                         @RequestParam("category") String category,
                                         @RequestParam("quantity") String quantity,
                                         @RequestParam("price") Float price,
@@ -74,6 +75,7 @@ public class Controllers {
             productDetails.setCategory(category);
             productDetails.setImageFile(image.getBytes());
             productDetails.setQuantity(Integer.parseInt(quantity));
+            productDetails.setName(name);
 
             productDetailsRepo.save(productDetails);
 

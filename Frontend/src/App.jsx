@@ -18,7 +18,7 @@ import Orders from "./Components/Orders";
 function App() {
   const [cartData, setCartData] = useState([])
   const [products, setProducts] = useState([]);
-  const [numberOfSelectedItems, setNumberOfSelectedItems] = useState(cartData.length);
+ 
 
   return (
     <>
